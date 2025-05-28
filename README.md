@@ -14,7 +14,8 @@ A modern, responsive website for R&R Roofing - Bay Area's trusted roofing contra
 ## 📁 Project Structure
 
 ```
-website/
+r-and-r-roofs/
+├── index.html               # Main website file
 ├── assets/
 │   └── images/
 │       ├── certifications/    # GAF, BBB, NRCA, Google, HomeAdvisor badges
@@ -25,7 +26,9 @@ website/
 │   └── style.css            # Main stylesheet
 ├── js/
 │   └── script.js            # Interactive functionality
-└── index.html               # Main website file
+├── README.md                # This documentation
+├── DEPLOYMENT.md            # Deployment guide
+└── .gitignore              # Git ignore file
 ```
 
 ## 🚀 Quick Start
@@ -43,10 +46,9 @@ website/
 
    ```bash
    # Option 1: Open directly in browser
-   open website/index.html
+   open index.html
 
    # Option 2: Use a local server (recommended)
-   cd website
    python -m http.server 8000
    # Then visit http://localhost:8000
    ```
@@ -60,37 +62,37 @@ For the best development experience with live reloading:
 npm install -g live-server
 
 # Start development server
-cd website
 live-server --port=3000
 ```
 
 ## 🌐 Deployment Options
 
-### Option 1: Netlify (Recommended)
+### Option 1: Vercel (Recommended)
+
+1. Fork this repository
+2. Connect your GitHub account to [Vercel](https://vercel.com)
+3. Import your repository
+4. Deploy with default settings (no build configuration needed)
+
+### Option 2: Netlify
 
 1. Fork this repository
 2. Connect your GitHub account to [Netlify](https://netlify.com)
 3. Deploy from GitHub with these settings:
    - **Build command**: Leave empty
-   - **Publish directory**: `website`
+   - **Publish directory**: `/` (root directory)
    - **Branch**: `master`
-
-### Option 2: Vercel
-
-1. Install Vercel CLI: `npm i -g vercel`
-2. Run: `vercel --cwd website`
-3. Follow the prompts
 
 ### Option 3: GitHub Pages
 
 1. Go to repository Settings > Pages
 2. Select source: Deploy from a branch
-3. Choose `master` branch and `/website` folder
+3. Choose `master` branch and `/ (root)` folder
 4. Your site will be available at: `https://username.github.io/r-and-r-roofs/`
 
 ### Option 4: Traditional Web Hosting
 
-Upload the entire `website/` folder contents to your web server's public directory.
+Upload all files in the repository root to your web server's public directory.
 
 ## 📋 Calendly Integration
 
@@ -98,7 +100,7 @@ To activate the scheduling functionality:
 
 1. Sign up at [calendly.com](https://calendly.com)
 2. Create an event type for "Free Roof Inspection"
-3. In `website/index.html`, replace the Calendly URL:
+3. In `index.html`, replace the Calendly URL:
    ```html
    data-url="https://calendly.com/your-username/free-roof-inspection"
    ```
@@ -115,7 +117,7 @@ The website uses a professional blue color scheme. Main colors are defined in CS
 
 ### Content
 
-All content can be easily modified in `website/index.html`:
+All content can be easily modified in `index.html`:
 
 - Company information
 - Service descriptions
@@ -124,11 +126,11 @@ All content can be easily modified in `website/index.html`:
 
 ### Images
 
-Replace images in the `website/assets/images/` folders with your own:
+Replace images in the `assets/images/` folders with your own:
 
-- Logo: `logos/randr-horiz-clear.png`
-- Project photos: `gallery/` folder
-- Certifications: `certifications/` folder
+- Logo: `assets/images/logos/randr-horiz-clear.png`
+- Project photos: `assets/images/gallery/` folder
+- Certifications: `assets/images/certifications/` folder
 
 ## 📱 Browser Support
 
